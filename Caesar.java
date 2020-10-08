@@ -9,16 +9,16 @@ public class Caesar {
         switch(choice){
             case 1:
                 System.out.println("请输入加密内容：");
-                in.nextLine();
-                String encryptedContent =  in.nextLine();
+                Scanner on = new Scanner(System.in);
+                String encryptedContent = on.nextLine();
                 CaesarEncryption1 encrypted =new CaesarEncryption1();
                 System.out.println("加密后的内容是：");
                 encrypted.CaesarEncryption1(encryptedContent);
                 break;
              case 2:
                 System.out.println("请输入解密内容：");
-                in.nextLine();
-                String decryptionContent = in.nextLine();
+                Scanner en = new Scanner(System.in);
+                String decryptionContent = en.nextLine();
                 CaesarEncryption2  decryption = new CaesarEncryption2();
                 System.out.println("解密后的内容是：");
                 decryption.CaesarEncryption2(decryptionContent);
@@ -33,7 +33,7 @@ public class Caesar {
 }
 //加密
  class CaesarEncryption1 {
-    //小写字母
+
     public void CaesarEncryption1(String encryptedContent) {
         char[] temp = encryptedContent.toCharArray();
         int[] newtemp = new int[temp.length];
